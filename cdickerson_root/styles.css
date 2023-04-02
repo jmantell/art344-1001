@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC&display=swap');
+
+body {font-family:  'Times New Roman', serif;
+    color: #2a2a2a; 
+    background: #80aa12;
+    margin: 0; }
+    ul, li {
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+h1, h2 {
+  color: #fff;
+  font-family: 'Playfair Display SC', serif;
+  text-shadow: 0px 5px 10px rgba(0, 0, 0, 1);
+  margin: 0;
+
+}
+
+p {font-size: 16px; 
+ font-weight: normal; 
+ line-height: 21px;}
+
+.main-navigation {background: #0a0f08;
+  color: white;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+
+.main-navigation a {
+    color: #fff;
+    text-decoration: none;
+}
+.dropdown {
+  display: none;
+  position: absolute;
+  width: 180px;
+  margin-left: 200px;
+  padding-top: 10px;
+}
+.dropdown li {
+  display: block;
+  background-color: black;
+  padding: 5px 10px;
+  border-top: 1px solid white;
+  
+}
+.dropdown-link:hover .dropdown {
+  display: block;
+}
+.dropdown-link::before {
+  content: "+ ";
+}
+
+.nav-link {color: white;
+  text-decoration: none;
+}
+.nav-link:hover {
+  color: #DD6BF9 !important;
+  text-decoration: underline !important;
+}
+.nav-link:visited {
+  color: #ffdb4b;
+}
+
+.active {color: #80aa12 !important; 
+       text-decoration: underline !important;}
+.title-header {
+  background-image: url(images/zelda6.jpeg); 
+  background-size: 1200px; 
+  background-position: center ;
+  padding: 100px;
+  text-align: center;
+  margin-top: 38px;
+}
+.main-content {
+  background-color: white;
+  border-style: solid;
+  border-color: #ccc;
+  border-width: 2px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  width: 600px;
+  margin: 20px auto;
+  padding: 20px 40px;
+
+}
+.button {
+  background-color: #ff0000; 
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 20px;
+  margin-top: 40px;
+  margin-bottom: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  width: 250px;
+  border-radius: 10px;
+  border-color: #ff0000;
+  border-bottom: 10px solid rgb(40, 35, 35);
+  transform: translateY(0px);
+  transition: all 400ms;
+  animation-name: joemama;
+  animation-duration: 5s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.button:hover {
+  background-color: rgb(40, 35, 35);
+  border-bottom: 10px solid rgb(241, 241, 241);
+  color: white;
+  transform: translateY(-10px);
+}
+.button:active {
+  background-color: aqua;
+  margin-top: 50px;
+  border-bottom: 0px solid #ff0000;
+  transform: translateY(10px);
+
+}
+.main-content img {
+  width: 50%;
+}
+.main-content img:nth-child(4) {
+  width: 100%;
+}
+.title-header h1 {
+  animation-name: popping-in;
+  animation-duration: 400ms;
+}
+.title-header h2 {
+  animation-name: popping-in;
+  animation-duration: 400ms;
+  animation-delay: 200ms;
+  transform: translateY(-50px); 
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+@keyframes popping-in {
+  from { transform: translateY(-50px); opacity:0; }
+  to { transform: translateY(0px); opacity:1; } 
+}
+@keyframes joemama { 
+0% {transform: translateX(0px); background-color: #80aa12;}
+25% {transform: translateX(-200px); background-color: #5EDB83;}
+50% {transform: translateX(0px); background-color: #74DFF2;}
+75% {transform: translateX(200px); background-color: #5E63DB}
+100% {transform: translateX(0px); background-color: #80aa12;}
+}

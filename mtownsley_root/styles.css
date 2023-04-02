@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&family=Roboto:wght@500&display=swap');
+    body {font-family: 'Roboto Serif', serif;
+        color: darkslategrey;
+        background-color: rgb(227, 220, 255);
+        margin:0}
+
+    ul, li {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    li {
+        display: inline;
+        margin-right: 20px;
+    }
+
+    h1,h2 {color: rgb(244, 240, 255);
+        font-family: 'Roboto Serif', serif;
+        text-shadow: 0px 5px 10px rgba(0, 0, 0, 1);
+        font-weight: bold;
+        margin: 0px;
+    }
+
+    p{font-size: 16px; font-weight: normal; line-height: 21 px;}
+
+    .main-navigation {
+        background: rgb(81, 77, 154);
+        color: seashell;
+        text-decoration: none;
+        padding: 10px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 999;
+    }
+
+    .main-navigation a {color: seashell;}
+
+    .dropdown {
+        display: none;
+        position: absolute;
+        width: 250px;
+        margin-left: 230px;
+        padding-top: 10px;
+    }
+
+    .dropdown li{
+        display: block;
+        background-color:rgb(81, 77, 154);
+        padding:5px 10px;
+        border-top: solid seashell
+    }
+
+.dropdown-link:hover .dropdown {
+    display:block;
+}
+
+.dropdown-link::after {
+    content:"+";
+}
+
+.nav-link { color: seashell;
+    text-decoration: none;}
+
+.nav-link:hover { color:rgb(227, 220, 255) !important;
+    text-decoration: none !important;
+}
+
+.nav-link:visited {color:rgb(235, 194, 227)
+}
+
+    .active {color: rgb(225, 255, 0) !important;
+            text-decoration: none;}
+
+    .title-header {
+        background-image: url(images/mt_image_header_3.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 100px;
+        text-align: center;
+    }
+    .main-content{ background-color:white;
+    border-style:solid;
+    border-color: mediumslateblue;
+    border-width: 3px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, .5);
+    width: 600px;
+    margin: 20px auto;
+    padding: 20px 40px;
+    }
+
+    .button { background-color: mediumslateblue;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: bold;
+        padding: 20px;
+        margin-top: 50px;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+        width: 250px;
+        border-radius: 10px;
+        border-bottom: 10px solid rgb(98, 83, 181);
+        transform: translateY(0px);
+        transition: all 0.25s;
+        animation-name: backtoback;
+        animation-duration: 5s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: 3;
+    }
+
+    .button:hover{background-color:rgb(81, 77, 154);
+        color: seashell;
+        transform: translateY(-10px);
+    }
+
+    .button:active{color:rgb(225, 255, 0);
+        border-bottom: 0px rgb(81, 77, 154);
+        transform: translateY(10px);
+    }
+
+.main-content img {
+    width:50%;
+}
+
+.main-content img:nth-child(3) {
+    width: 100%;
+}
+
+.title-header h1 {
+    animation-name: popping-in;
+    animation-duration: 400ms;
+}
+
+.title-header h2 {
+    animation-name: popping-in;
+    animation-duration: 400ms;
+    animation-delay: 200ms;
+    transform: translateY(-50px);
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes popping-in {
+    from{transform: translateY(-50px); opacity:0;}
+    to{transform: translateY(0px); opacity:1;}
+}
+
+@keyframes backtoback {
+    0%{transform: translateX(0px); background-color:rgb(235, 194, 227);}
+    25%{transform: translateX(-200px); background-color:rgb(236, 129, 255);}
+    50%{transform: translateX(0px); background-color:rgb(81, 68, 255);}
+    75%{transform: translateX(200px); background-color:rgb(74, 228, 255);}
+    100%{transform: translateX(0px); background-color:rgb(235, 194, 227);}
+}

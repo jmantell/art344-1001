@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Viga&display=swap');
+.nav-link{
+    color: white;
+    text-decoration: none;
+}
+.nav-link:hover{
+    color: yellow;
+    text-decoration: underline
+    
+}
+
+.nav-link:visited{
+    color: burlywood;
+}
+
+.active{
+    color: yellow !important;
+    text-decoration: underline !important;
+}
+
+body{
+    color:black !important; 
+    background:seashell; 
+    font-family: tahoma;
+    margin: 0px;
+}
+
+ul,li {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    margin-right: 20px;
+}
+
+
+h1,h2{
+    color:seashell;
+    text-shadow: 0px 5px rgba(0,0,0,1);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+p{
+    font-size:18px; 
+    font-weight:bold; 
+    line-height:24px;
+}
+
+.main-navigation{
+    background: brown; 
+    color:white;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top:0;
+    z-index: 999;
+
+}
+
+.main-navigation a {
+    color:white;
+    text-decoration: none;
+}
+
+.active{
+    color:yellow;
+    text-decoration: underline;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    width: 200px;
+    margin-left: 250px;
+    padding-top: 10px;
+}
+
+.dropdown li {
+    display: block;
+    background: brown;
+    PADDING: 5px 10px;
+    border-top: 1px solid white;
+
+}
+
+.dropdown-link:hover .dropdown{
+    display:block;
+
+}
+
+.dropdown-link::before{
+    content: "+";
+
+}
+
+.title-header{
+    background-image: url(images/headre.jpg);
+    background-size: 520px;
+    background-repeat: repeat-x;
+    background-position: bottom right;
+    padding: 100px;
+    text-align: center;
+}
+.main-content {
+    background-color: white;
+    border-style:solid;
+    border-color:brown;
+    border-width: 2px;
+    border-radius: 10px;
+    overflow:hidden;
+    box-shadow: 0px 5px 10px rgba(46,46,46,.5);
+    width: 600px;
+    margin: 20px auto;
+    padding: 20px 40px;
+
+}
+
+.button{
+background-color: pink;
+color: black;
+text-decoration: none;
+text-transform: uppercase;
+font-weight: bold;
+font-size: 24px;
+padding: 20px;
+margin-right: auto;
+margin-left: auto;
+margin-bottom: 10px;
+display:block;
+text-align: center;
+width: 250px;
+border-radius: 10px;
+border-bottom: 10px solid palevioletred;
+transform: translateY(0px);
+transition:all 400ms;
+animation-name: dancey;
+animation-duration: 5s;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+}
+
+.button:hover{
+    background-color: palevioletred;
+    color: pink;
+    border-bottom: 10px solid brown;
+    transform: translateY(-10px);
+}
+
+.button:active{
+background-color:brown;
+color: white;
+border-bottom: 0px;
+transform: translateY(1ßß0px)
+}
+
+.main-content img{
+    width: 50%;
+}
+
+.main-content img:nth-child(3) {
+    width: 100%;
+}
+
+.title-header h1{
+    animation-name: popping-in;
+    animation-duration: 400ms;
+}
+
+.title-header h2{
+    animation-name: popping-in;
+    animation-duration: 400ms;
+    animation-delay: 200ms;
+    transform: translateY(-50px);
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes popping-in{
+    from{transform: translateY(-50px); opacity: 0;}
+    to {transform: translateY(0px); opacity: 1;}
+
+}
+
+@keyframes dancey{
+    0% { transform: translateX(0px); background-color: blue;} 
+    25% { transform: translateX(-200px); background-color: palevioletred;}
+    50%{ transform: translateX(0px); background-color: blueviolet;}
+    75% {transform: translateX(200px); background-color: aqua;}
+    100% { transform: translateX(0px); background-color: blue;}
+}

@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+body {
+    font-family: Georgia, serif;
+    color: #333;
+    background: #FCEDD2;
+    margin: 0;
+}
+ul, li {
+    margin:0;
+    padding:0;
+}
+li {
+    display: inline;
+    margin-right: 20px;
+}
+a {
+    color: #ABD1BE;
+}
+   h1,h2 { 
+    color: #363C66;
+    font-family: 'DM Serif Display', serif;
+    margin:0;
+}
+   p { 
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 21px;
+}
+
+.main-navigation {
+    background: #70A7C2;
+    color: #F7BAC4;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999
+}
+.main-navigation a {
+    color: #F7BAC4;
+    text-decoration: none;
+}
+.dropdown {
+    display:none;
+    position: absolute;
+    width:200px;
+    margin-left:215px;
+    padding-top:10px;
+}
+.dropdown li {
+    display: block;
+    background-color:#70A7C2;
+    padding:5px 5px;
+    border-top: 1px solid white;
+}
+.dropdown-link:hover .dropdown {
+    display: block;
+}
+.dropdown-link::after {
+    content: "+"
+}
+.nav-link {
+    color: #F7BAC4;
+     text-decoration: none;
+}
+.nav-link:hover {
+    color: #F7BAC4 !important;
+    text-decoration: none;
+}
+.nav-link:visited {
+    color: #8F3C5E;
+    }
+.active {
+    color: #B36B99 !important;
+    text-decoration: underline !important;
+}
+.title-header {
+    background-image: url(images/bubbleheart-bg-header.jpeg);
+    background-size:345px;
+    background-repeat: repeat-x;
+    padding: 100px;
+    text-align:center;
+    margin-top: 38px;
+} 
+.main-content {
+    background-color: white;
+    border-style:solid;
+    border-color: #000;
+    border-width: 2px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px rgba(0,0,0,.5);
+    width:600px;
+    margin:20px auto;
+    padding:20px 40px;
+}
+.button {
+    background-color: #666;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    width: 250px;
+    border-radius: 10px;
+    border-bottom: 10px solid black;
+    transform: translateY(0px);
+    transition: all 400ms;
+    animation-name: jumpjivewail;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+.button:hover {
+    background-color: #ABD1BE;
+    color: black;
+    border-bottom: 10px solid #0F3325;
+    transform: translateY(-10px)
+    
+}
+.button:active {
+    background-color: pink;
+    border-bottom: 0px solid #47192c;
+    transform: translateY(10px);
+}
+.main-content img {
+    width: 50%;
+}
+.main-content img:first-child {
+    width:100%;
+}
+
+.title-header h1 {
+    animation-name: popping-in;
+    animation-duration: 1s;
+}
+.title-header h2 {
+    animation-name: popping-in;
+    animation-duration: 400ms;
+    animation-delay: 200ms;
+    transform: translateY(-50px);
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes popping-in {
+    from {transform: translateY(-50px); opacity:0; }
+    to { transform: translateY(0); opacity: 1;}
+}
+@keyframes jumpjivewail {
+    0% { transform:translateX(0); background-color:#666}
+    25% { transform:translateX(-200px);  background-color: pink}
+    50% { transform:translateX(0); background-color: #70A7C2}
+    75% { transform:translateX(200px); background-color: green}
+    100% { transform:translateX(0); background-color:#666}
+}

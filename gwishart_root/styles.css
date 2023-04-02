@@ -1,0 +1,164 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:ital@1&display=swap');
+
+body {
+    font-family: Georgia, serif; 
+    color: #333; 
+    background: #dcddc5; 
+    margin: 0;
+    font-size: 16px;
+}
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+li {
+    display: inline;
+    margin-right: 20px;
+}
+a {
+    color:#a8a296;
+}
+h1, h2 {
+    color: #333; 
+    font-family: 'Zilla Slab', serif;
+    text-shadow: 0px 5px 10px rgba(0,0,0,.5);
+    margin: 0;
+}
+p {
+    font-size: 16px; 
+    font-weight: normal; 
+    line-height: 21px; 
+}
+.main-navigation {
+    background: #f7f2eb; 
+    color: #333;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+}
+.main-navigation a {
+    color: #333; 
+    text-decoration: none;
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    width: 200px;
+    margin-left: 210px;
+    padding-top: 10px;
+}
+.dropdown li {
+    display: block;
+    background-color: #f7f2eb;
+    padding: 5px 10px;
+    border-top: 1px solid #333
+}
+.dropdown-link:hover .dropdown {
+    display:block;
+}
+.dropdown-link::before {
+    content: "+";
+}
+.nav-link {
+    color: #333; 
+    text-decoration: none;
+}
+.nav-link:hover {
+    color: #a8a296 !important;
+    text-decoration: underline !important;
+}
+.nav-link:visited {
+    color: #e4cdad;
+}
+.active {
+    color: #a8a296 !important; 
+    text-decoration: underline !important;
+}
+.title-header {
+    background-image: url(images/bubbles.jpg);
+    background-size: 200px; 
+    background-repeat: repeat-x;
+    padding: 100px;
+    text-align: center;
+    margin-top: 38px;
+}
+.main-content {
+    background-color: white; 
+    border-style: solid; 
+    border-color: #000; 
+    border-width: 2px; 
+    border-radius: 10px; 
+    overflow: hidden; 
+    box-shadow: 0px 5px 10px rgba(0,0,0,.5);
+    width: 600px;
+    margin: 20px auto;
+    padding: 20px 40px;
+}
+.button {
+    background-color: #e6d0c5;
+    color: #a8a296;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 250px;
+    border-radius: 10px;
+    border-bottom: 10px solid #a8a296;
+    transform: translateY(0px);
+    transition: all 400ms;
+    animation-name: jumpjivewail;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+.button:hover {
+    background-color: #a8a296;
+    color: #e6d0c5;
+    border-bottom: 10px solid #e6d0c5;
+    transform: translateY(-10px);
+}
+.button:active {
+    background-color: #e6d0c5;
+    color: white;
+    border-bottom: 0px solid #e6d0c5;
+    transform: translateY(10px);
+}
+.main-content img {
+    width: 50%;
+}
+.main-content img:nth-child(3) {
+    width: 100%;
+}
+.title-header h1 {
+    animation-name: popping-in;
+    animation-duration: 400ms;
+}
+.title-header h2 {
+    animation-name: popping-in;
+    animation-duration: 400ms;
+    animation-delay: 200ms;
+    transform: translateY(-50px);
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+@keyframes popping-in {
+    from {transform: translateY(-50px); opacity: 0;}
+    to {transform: translateY(0px); opacity: 1;}
+}
+@keyframes jumpjivewail {
+    0% {transform: translateX(0px); background-color: #e6d0c5;}
+    25% {transform: translateX(-200px); background-color: pink;}
+    50% {transform: translateX(0px);background-color: blue}
+    75% {transform: translateX(200px);background-color: green}
+    100% {transform: translateX(0px);background-color:#e6d0c5}
+}

@@ -1,0 +1,172 @@
+       /* Color Style Hex Code #FE85B8, #3C3C3C, #70CAD1, #EEE5E9, #003B69 */
+       @import url('https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Merriweather:wght@300;400&display=swap');
+       p{
+            font-size: 16px;
+            line-height: 21px;
+            font-weight: light; }
+        
+        body{
+            color:#3C3C3C ;
+            background-color:#EEE5E9;
+            font-family: 'Merriweather', serif;
+            font-style: normal;
+            font-weight: 300;
+            margin: 0px;}
+        ul, li {
+            margin: 0; 
+            padding: 0 
+        }
+
+        li{
+            display: inline;
+            margin-right: 20px;
+        }
+        .dropdown {
+            display: none;
+        }
+        h1, h2 {
+            color: #70CAD1;
+            text-shadow: 0px 5px 8px rgba(140,140,140,.5);
+            font-family: 'lato', sans-serif;
+            font-style: normal;
+            font-weight: 900;
+            margin: 0;
+            padding: 0;
+
+        }
+        .main-navigation {
+            background-color: #003B69;
+            color: #EEE5E9;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 999;
+        } 
+        .main-navigation a {
+            color: #EEE5E9; 
+            text-decoration: none;
+        }
+        .dropdown{
+            display: none;
+            position: absolute;
+            width: 200px;
+            margin-left: 225px;
+            padding-top: 10px;
+        }
+        .dropdown li{
+            display:block;
+            background-color: #003B69;
+            padding: 5px 10px ;
+            border-top: 1px solid ivory;
+        }
+        .dropdown-link:hover .dropdown{
+            display: block
+        }
+        .dropdown-link::before{
+            content: "+";
+        }
+        .nav-link {
+            color: #EEE5E9; 
+            text-decoration: none; }
+        .nav-linkactive{
+            color: #FE85B8 !important; 
+            text-decoration: underline !important;}
+
+        .nav-link:hover{
+            color: gold !important;
+            text-decoration: underline !important;
+        }
+        .nav-link:visited{
+            color: #dbbcf8
+        }
+        .title-header{
+            background-image: url(images/Artboard\ 1.png);
+            background-size: 400px;
+            background-position: top left;
+            background-repeat: repeat-x;
+            text-align: center;
+            padding: 50px;
+            margin-top: 40px;
+        }
+        .main-content{
+            background-color: white;
+            border-style: solid;
+            border-color:#CCCCCC;
+            border-width: 3px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 10px rgba(0,0,0,.5);
+            width: 600px;
+            margin: 25px auto;
+            padding: 25px 25px;
+        }
+        .button{
+            background-color: #3C3C3C;
+            color: ivory;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 24px;
+            font-weight: bold;
+            padding: 20px;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 10px;
+            display:block;
+            text-align: center;
+            width: 250px;
+            border-radius: 10px;
+            border-bottom: 10px solid black;
+            transform: translateY(0px);
+            transition: all 400ms;
+            animation-name: jumpjivewhale;
+            animation-duration: 4s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: 3;
+
+        }
+        .button:hover{
+            background-color: #f869a5;
+            color: #003340;
+            border-bottom: 10px solid #FE85B8;
+            transform: translateY(-10px);
+
+        }
+        .button:active{
+            background-color: purple;
+            border-bottom: 0px solid rgb(169, 14, 169);
+            transform: translateY(10px);
+        }
+        .main-content img{
+            width: 50%;
+        }
+        .main-content img:first-child{
+            width: 100%;
+        }
+        .title-header h1{
+            animation-name: popping-in;
+            animation-duration: 1s;
+        }
+        .title-header h2{
+            animation-name: popping-in;
+            animation-duration: 1s;
+            animation-delay: 500ms;
+            transform:translateY(-50px);
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+        @keyframes popping-in {
+            from { transform: translateY(-50px); opacity: 0;}
+            to {transform: translateY(0px); opacity: 1;}
+        }
+        @keyframes jumpjivewhale{
+            0% {transform: translateX(0);background-color: #777}
+            25% {transform: translateX(-250px); background-color:green}
+            50% {transform: translateX(0);background-color: blue}
+            75% {transform: translateX(200px); background-color: green}
+            100% {transform: translateX(0); background-color: #777}
+
+        }
+
+
+

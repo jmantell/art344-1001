@@ -1,0 +1,177 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap');
+
+body { font-family: Georgia , serif;
+	color: #333;
+	background: #F5F1DD;
+	margin: 0;}
+
+	ul, li {
+		margin:0;
+		padding:0;}
+li {
+	display: inline;
+	margin-right: 20px;
+}
+
+			h1, h2 {font-family: Zilla Slab, serif;
+				color: #fff;
+				text-shadow: 0px 5px 10px rgba(0,0,0,1);
+				margin: 0;
+				}
+			
+			p { 
+				font-size: 16px;
+				font-weight: normal;
+				line-height: 21px 
+			}
+			
+			.main-navigation {
+				background: #F7B39C;
+				color: white;
+				padding: 10px;
+				position: fixed;
+				width: 100%;
+				top: 0;
+				z-index: 999;
+			}
+
+.main-navigation a {
+	color:white;
+	text-decoration:none;
+}
+
+.dropdown {
+	display: none;
+	}
+.dropdown-link:hover .dropdown {
+	display:block;
+	position: absolute;
+	width: 200px;
+	margin-left: 210px;
+	padding-top: 10px;
+}
+.dropdown li {
+	display:block;
+	background-color: #F7B39C;
+	padding: 5px 10px;
+	border-top: 1px solid white;
+}
+.dropdown-link::after {
+	content: "+";
+}
+			.nav-link {
+				color: white;
+				text-decoration: none;
+			}
+.nav-link:hover {
+	text-decoration: underline;		
+}
+.nav-link:visited {
+	color: dimgray
+}
+			
+			.active {
+				color: cornflowerblue !important;
+				text-decoration: underline !important;
+			}
+				
+			.title-header {
+				background-image: url("images/headerimg.jpeg");
+				background-size: cover;
+				background-position:bottom right;
+				padding: 100px;
+				text-align: center;
+				margin-top: 38px;
+			}
+			
+			.main-content {
+				background-color: white;
+				border-style:solid;
+				border-color: #F29696;
+				border-width: 2px;
+				border-radius: 10px;
+				overflow: hidden;
+				box-shadow: 0px 5px 10px rgba(0,0,0,.5);
+				width: 600px;
+				margin: 20px auto;
+				padding: 20px 40px;
+				
+			}
+			.button {
+				background-color: #333;
+				color: white;
+				border-bottom: 10px solid black;
+				text-decoration:none;
+				text-transform: uppercase;
+				font-size: 24px;
+				font-weight: bold;
+				padding: 20px;
+				margin-top: 50px;
+				margin-bottom: 10px;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				font-family: Zilla Slab,serif;
+				text-align: center;
+				width: 250px;
+				border-radius: 10px;
+				transform: translateY(0px);
+				transition: all 400ms;
+				animation-name: jumpjivewail;
+				animation-duration: 5s;
+				animation-timing-function: ease-in-out;
+				animation-iteration-count: infinite;
+			}
+.button:hover {
+	background-color: pink;
+	color: purple;
+	border-bottom: 10px solid purple;
+	transform: translateY(-10px);
+}
+.button:active {
+	background-color: purple;
+	color: white;
+	border-bottom: 0px;
+	transform: translateY(10px);
+}
+.main-content img {
+	width:50%;
+}
+.main-content img:nth-child(3) {
+	width:100%;
+}
+.title-header h1 {
+	animation-name: popping-in;
+animation-duration: 400ms;}
+.title-header h2 {
+	transform: translateY(-50px);
+	opacity: 0;
+	animation-delay: 200ms;
+	animation-name: popping-in;
+animation-duration: 400ms;
+animation-fill-mode: forwards;}
+@keyframes popping-in {
+	from {transform:translateY(-50px); opacity:0; }
+	to {transform: translateY(0); opacity:1;
+	}
+}
+@keyframes jumpjivewail {
+	0%{transform:translateX(0px); background-color:#666}
+	25% {transform: translateX(-200px); background-color: pink}
+	50% {transform:translateX(0px); background-color: blue;}
+	75% {transform: translateX(200px); background-color: green;}
+	100%{transform:translateX(0px); background-color: #666}
+
+	}
+
+
+
+
+
+
+
+
+

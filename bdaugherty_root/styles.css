@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+body {
+    font-family: Georgia, serif;
+    color: #333;
+    background: rgba(25, 74, 148, 1);
+    margin: 0;
+}
+a {
+    color:rgba(25, 74, 148, 1)
+}
+h1, h2 {
+    color: #fff;
+    font-family: 'Roboto Slab', serif;
+    text-shadow: 0px 5px 10px rgba(0,0,0,1);
+    font-weight: normal
+}
+ul, li {
+    margin:0;
+    padding:0;
+    list-style: none;
+    display: inline;
+}
+li {
+    display: inline;
+    margin-right: 20px;
+}
+p {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 21px;
+}
+.main-nav {
+    background: rgba(94, 155, 191, 1);
+    color: white;
+    padding:20px;
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index: 999;
+}
+.main-nav a {
+    color:white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+.main-nav a:hover {
+    color:rgb(0, 85, 255) !important;
+    text-decoration: underline;
+}
+.main-nav a:visited {
+    color:#ffffff;
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    width:200px;
+    margin-left: 210px;
+    padding-top:20px;
+}
+.dropdown li {
+    display: block;
+    background: rgb(94, 155, 191);
+    border-top: 1px solid white;
+    padding: 5px 10px;
+}
+.dropdown-link:hover .dropdown {
+    display: block;
+}
+.dropdown-link::before {
+    content: "+";
+}
+.nav-link{
+    color:white;
+    text-decoration: none;
+}
+.nav-link:hover {
+    color: #fbdd74 !important;
+}
+.active {
+    color:rgb(0, 0, 0) !important;
+    text-decoration:underline !important;
+}
+.title-header {
+    background-image:url(images/header-bg.png);
+    background-size:1000px;
+    background-repeat: repeat-x;
+    padding: 100px;
+    text-align: center;
+    margin-top: 38px;
+}
+.main-content {
+    background-color: white;
+    border-style: solid;
+    border-color: #000;
+    border-width: 2px;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow: 0px 5px 10px rgba(0,0,0,.5);
+    width: 600px;
+    margin: 20px auto;
+    padding: 20px 40px;
+}
+.button {
+    background-color:#666;
+    color: white;
+    font-size: 24px;
+    padding:20px;
+    margin-top:40px;
+    display:block;
+    text-align: center;
+    width:300px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight:bold;
+    text-decoration:none;
+    text-transform: uppercase;
+    letter-spacing:1px;
+    border-radius: 20px;
+    border-bottom:10px solid black;
+    transform: translateY(0px);
+    transition: all 400ms;
+    animation-name: jumpjivewail;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+.button:hover {
+    background-color: pink;
+    color: black;
+}
+.button:active {
+    background:purple;
+    color:white;
+    margin-top:50px;
+    border-bottom:none;
+}
+.main-content img {
+    width:50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom:30px;
+}
+.main-content img:last-child {
+    margin-bottom:0;
+}
+.main-content img:first-child {
+    display:none;
+}
+.main-content img:nth-child(3) {
+    width:100%;
+}
+.title-header h1 {
+    animation-name: popping-in;
+    animation-duration: 400ms;
+    }
+.title-header h2 {
+animation-name: popping-in;
+animation-duration: 400ms;
+animation-delay: 200ms;
+transform: translateY(-50px);
+opacity: 0;
+animation-fill-mode:forwards;
+}
+@keyframes popping-in {
+    from { transform:translateY(-50px); opacity: 0;}
+    to { transform:translateY(0px); opacity: 1; }
+}
+@keyframes jumpjivewail {
+    0% { transform: translateX(0px); background-color: aqua;}
+    25% { transform: translateX(-200px); background-color: green ;}
+    50% { transform: translateX(0 px); background-color: rgb(197, 11, 197) ;}
+    75% { transform: translateX(200px); background-color: rgb(22, 187, 216) ;}
+    100% { transform: translateX(-200px); background-color: rgb(128, 0, 0) ;}
+}

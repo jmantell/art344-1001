@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap');
+body {
+        font-family: Georgia, serif;
+        color: #333;
+        background: #E8D6BE;
+        margin:0;}
+a {
+        color: black}
+ul, li {
+        margin:0;
+        padding: 0;}
+li {
+        display: inline;
+        margin-right: 20px;}
+h1, h2 {
+        font-family: Zilla Slab;
+        color: #FFFF;
+        text-shadow: 0px 5px 10px rgba(0, 0, 0, 1);
+        margin: 0;}
+p {
+        font-size: 16px;
+        font-weight: normal;
+        line-height: 21px; }
+
+.main-navigation {
+        background: #8C6658;
+        color:white;
+        padding: 10px;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 999;
+}
+.main-navigation a {
+        color: white;
+        text-decoration: none;}
+.dropdown {
+        display:none;
+        position: absolute;
+        width: 200px;
+        margin-left: 210px;
+        padding-top:10px;
+}
+.dropdown li {
+        display: block;
+        background-color: #8C6658;
+        padding:5px 10px;
+        border-top:1px solid white;
+
+}
+.dropdown-link:hover .dropdown {
+        display:block;
+}
+.dropdown-link::after {
+        content: "+";
+}
+.nav-link {
+        color: white;
+        text-decoration: none;}
+.nav-link:hover {
+        color: yellow !important;
+        text-decoration: underline !important;
+}
+.nav-link:visited {
+        color: #ccc;
+}
+
+.active {
+        color: yellow !important;
+        text-decoration: underline !important;}
+.title-header {
+        background: url(images/header-background.jpg);
+        background-size: 300px;
+        background-repeat: repeat-x;
+        padding: 100px;
+        text-align: center;
+        margin-top: 38px;}
+.main-content {
+        background-color: white;
+        border-style: solid;
+        border-color: #000;
+        border-width: 2px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 5px 10px rgba(0,0,0,.5);
+        width: 600px;
+        margin: 20px auto;
+        padding: 20px 40px;}
+
+.button {
+        background-color: #666;
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: bold;
+        padding: 20px;
+        margin-top: 50px;
+        margin-bottom: 10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        width: 250px;
+        border-radius: 10px;
+        border-bottom: 10px solid black;
+        transform: translateY(0px);
+        transition: all 400ms;
+        animation-name: jumpjivewail;
+        animation-duration: 5s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+
+        }
+        .button:hover {
+                background-color: pink;
+                color: purple;
+                border-bottom: 10px solid purple;
+                transform: translateY(-10px);
+        }
+        .button:active {
+                background-color: purple;
+                color: white;
+                border-bottom: 0px solid purple;
+                transform: translateY(10px);
+        }
+        .main-content img {
+                width:50%;
+        }
+        .main-content img:nth-child(3) {
+                width:100%;
+        }
+        .title-header h1 {
+                animation-name: popping-in;
+                animation-duration: 400ms;
+        }
+        .title-header h2 {
+                animation-name: popping-in;
+                animation-duration: 400ms;
+                animation-delay: 200ms;
+                transform: translateY(-50px);
+                opacity: 0;
+                animation-fill-mode:forwards;
+        }
+
+        @keyframes popping-in {
+                from { transform:translateY(-50px); opacity:0; }
+                to { transform:translateY(0px); opacity:1; }
+        }
+
+        @keyframes jumpjivewail {
+                0% { transform:translateX(0px); background-color: #666; }
+                25% { transform:translateX(-200px); background-color: pink; }
+                50% { transform:translateX(0px); background-color: blue; }
+                75% { transform:translateX(200px); background-color: green; }
+                100% { transform:translateX(0px); background-color: #666; }
+        }

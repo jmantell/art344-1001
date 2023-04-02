@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Faustina&display=swap');
+
+body { 
+    color: #333; 
+    background: #FBDBA2; 
+    font-family: Tahoma, serif; 
+    margin: 0; 
+}
+ul, li { 
+    margin: 0; 
+    padding: 0;
+}
+li { 
+    display: inline; 
+    margin-right: 20px; 
+}
+h1, h2 { 
+    color: #FEE8DB; 
+    font-family: 'Faustina'; 
+    text-shadow: 0px 5px 10px rgba(0,0,0,1); 
+    margin: 0;
+}
+p { 
+    font-size: 16px; 
+    font-weight: normal; 
+    line-height: 21px; 
+} 
+       
+.main-navigation {
+    background: #F6EADB; 
+    color: #102693; 
+    padding: 10px; 
+    position: fixed; 
+    width: 100%; 
+    top:0; 
+    z-index: 999;
+}
+        
+.main-navigation a { 
+    color: #1939B7; 
+    text-decoration: none
+} 
+        
+.dropdown {
+    display: none; 
+    position: absolute;
+    width: 200px;
+    margin-left: 210px;
+    padding-top: 10px;
+}
+
+.dropdown li{
+    display: block;
+    background-color: #FEE8DB;
+    padding: 5px 10px;
+    border-top: 1px solid blue;
+    
+}
+
+.dropdown-link:hover .dropdown { 
+    display: block; 
+}
+
+.dropdown-link::before {
+    content: "+";
+}
+
+.nav-link { 
+    color: #102693; 
+    text-decoration: none; 
+}
+        
+.nav-link:hover { 
+    color: #3366FF !important; 
+    text-decoration: underline !important; 
+}
+
+.nav-link:visited {
+    color: coral;
+}
+        
+.active { 
+    color: #3366FF !important; 
+    text-decoration: underline !important; 
+}
+        
+.title-header { 
+    background-image: url(images/header_flowerbackground.jpg); 
+    background-size: cover; 
+    background-position: top; 
+    padding: 100px; 
+    text-align: center; 
+    margin-top: 38px; 
+}
+        
+.main-content {
+    background-color: white; 
+    border-style:solid; 
+    border-color: #000; 
+    border-width: 2px; 
+    border-radius: 10px; 
+    overflow: hidden; 
+    box-shadow: 0px 5px 10px rgba(0,0,0,.5); 
+    width: 600px; 
+    margin: 20px auto; 
+    padding: 20px 40px; 
+}
+        
+.button {
+    background-color: #666; 
+    color: white; 
+    text-decoration: none; 
+    text-transform: uppercase; 
+    font-size: 24px; 
+    font-weight: bold; 
+    padding: 20px; 
+    margin-top: 50px; 
+    margin-bottom: 10px; 
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
+    text-align: center; 
+    width: 250px; 
+    border-radius: 10px; 
+    border-bottom: 10px solid black; 
+    transform: translateY(0px);
+    transition: all 400ms;
+    animation-name: jumpjivewail;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.button:hover { 
+    background-color: aqua; 
+    color: black; 
+    border-bottom: 10px solid darkblue;
+    transform: translateY(-10px);
+
+}
+       
+.button:active { 
+    background-color: mediumpurple; 
+    color: white; 
+    border-bottom: 0px solid purple;
+    transform: translateY(10px);
+
+}
+.main-content img {
+    width: 50%;
+    
+}
+.main-content img:nth-child(3) {
+    width: 100%; 
+}
+
+.title-header h1 {
+    animation-name: popping-in;
+    animation-duration: 400ms;
+}
+
+.title-header h2 {
+    animation-name: popping-in;
+    animation-duration: 400ms;
+    animation-delay: 200ms;
+    transform: translateY(-50px);
+    opacity:0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes popping-in {
+    from { transform:translateY(-50px); opacity: 0; }
+    to { transform:translateY(0px); opacity: 1; }
+}
+
+@keyframes jumpjivewail {
+    0% { transform:translateX(0px); background-color: #666;}
+    25% { transform: translateX(-200px); background-color: deeppink;}
+    50% { transform:translateX(0px); background-color: blue;}
+    75% { transform: translateX(200px); background-color: lawngreen; }
+    100% { transform:translateX(0px); background-color: #666; }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

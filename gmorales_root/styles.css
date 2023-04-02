@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap');
+body { font-family: Georgia , serif; color:#333; background: #3e49b3; margin: 0;  }
+ul, li { margin: 0; padding: 0; }
+li { display: inline; margin-right: 20px; }
+h1, h2 { font-family: 'Zilla Slab'; color: #80ffec; text-shadow: 0px 5px 10px rgba(0,0,0,1); margin: 0; }
+p { font-size: 16px; font-weight: normal; line-height: 21px; }
+.main-navigation { background: #6673ff; color: white; padding: 10px; position: fixed; width: 100%; top: 0; z-index: 999; } 
+.main-navigation a {color: white; text-decoration: none;}
+.dropdown { display: none; position: absolute; width: 200px; margin-left: 210px; padding: 10px; }
+.dropdown li {
+    display: block;
+    background-color: #6673ff;
+    padding: 5px 10px;
+    border-top: 1px solid white;
+}
+.dropdown-link:hover .dropdown {
+    display: block;
+}
+.dropdown-link::before {
+    content: "+";
+}
+.nav-link { color: white; background: #6673ff; text-decoration: none; }
+.nav-link:hover { color: #80ffec !important; text-decoration: underline !important; }
+.nav-link:visited { color: rgb(250, 209, 104); }
+.active { color: #80ffec !important; text-decoration: underline !important }
+.title-header { background-image: url(images/title_header.jpg); background-size: cover ; background-position: center ; background-repeat: none; padding: 100px; text-align: center; margin-top: 38px; }
+.main-content { background-color: white; border-style: solid; border-color: #aaa; border-width: 2px; border-radius: 10px; overflow: hidden; box-shadow: 0px 5px 10px rgba(0,0,0,.5); width: 600px; margin: 20px auto; padding: 20px 40px ; }
+.button {
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 250px;
+    border-radius: 10px;
+    border-bottom: 10px solid black;
+    transform: translateY(0px);
+    transition: all 400ms;
+    animation-name: jumpjivewail;
+    animation-duration: 5s;
+    animation-iteration-count: 3;
+    animation-timing-function: ease-in-out;
+}
+.button:hover {
+    background-color: #80ffec;
+    color: #1e5c1e;
+    border-bottom: 10px solid #1e544c;
+    transform: translateY(-10px);
+}
+.button:active {
+    background-color: purple;
+    color: white;
+    border-bottom: 0px solid purple;
+    transform: translateY(10px);
+}
+.main-content img {
+    width: 50%;
+}
+.main-content img:nth-child(2) {
+    width: 100%
+}
+.title-header h1 {
+    animation-name: popping-in;
+    animation-duration: 800ms;
+}
+.title-header h2 {
+    animation-name: popping-in;
+    animation-duration: 800ms;
+    animation-delay: 400ms;
+    transform: translateY(-50px); opacity: 0;
+    animation-fill-mode: forwards;
+}
+@keyframes popping-in {
+    from {transform: translateY(-50px); opacity: 0; }
+    to {transform: translateY(0px); opacity: 1; }
+}
+@keyframes jumpjivewail {
+    0% { transform: translateX(0px); background-color:#333;}
+    15% { transform: rotate(540deg); background-color: rgb(251, 255, 0);}
+    25% { transform: translateX(-200px); background-color: rgb(251, 255, 0);}
+    40% { transform: rotate(-300deg); background-color: rgb(37, 255, 59);}
+    50% { transform: translateX(0px); background-color: rgb(37, 255, 59); }
+    65% { transform: rotate(540deg); background-color: #ff4242;}
+    75% { transform: translateX(200px); background-color: #ff4242;}
+    100% { transform: translateX(0px); background-color: #333;}
+
+}
