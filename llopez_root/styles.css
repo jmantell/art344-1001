@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
+
+body {font-family: Georgia, serif; color:white; background:#000; margin:0;}
+    p {font-size:16px; font-weight:normal; line-height:21px;}
+
+    ul, li {margin: 0; padding: 0;}
+    li {display: inline; margin-right: 20px;}
+    
+    a{color: #EE05F2}
+
+    .main-navigation a {color: white; text-decoration: none;}
+    .dropdown {display: none; position: absolute; width: 200px; margin-left: 270px; padding-top: 10px;}
+    .dropdown li {display: block; background-color:#020126; padding: 5px 0px; border-top: 1px solid white;}
+    .dropdown-link:hover .dropdown {display: block}
+    .dropdown-link::before {content:"+"; }
+
+
+    .nav-link { color: white; text-decoration: none;}
+    .active {color:#EE05F2 !important; text-decoration: underline !important;}
+   
+    h1, h2 {font-family: Rubik Vinyl, 'Franklin Gothic Medium'; color:white; text-shadow:0px 5px 10px rgba(0,0,0,1); margin: 0;}
+    .main-navigation {background: #020126; position: fixed; width: 100%; top: 0; padding: 10px; z-index: 999;}
+    .nav-link {color: antiquewhite; text-decoration: none;}
+    .nav-link:hover {color:#EE05F2; text-decoration: underline;}
+    .nav-link:visited {color: blueviolet}
+
+    .active {color:#EE05F2; text-decoration: underline;}
+    .title-header {background-image: url(images/header_background.jpg); background-size: cover; background-position: top left; background-repeat:no-repeat; padding: 100px; text-align: center; margin-top: 38px;}
+    
+    .main-content {background-color:#020126; border-style: solid; border-color: #7503A6; border-width: 2px; border-radius: 8px; overflow:hidden; box-shadow: 0px 5px 10px rgba(0,0,0,.5); width: 600px; margin: 20px auto; padding: 20px 40px;}
+
+    .button {
+        background-color: #7503A6; 
+        color: white; 
+        text-decoration: none; 
+        text-transform: uppercase; 
+        font-size: 24px; 
+        font-weight: bold; 
+        padding: 20px; 
+        margin-top: 50px; 
+        margin-bottom: 10px; 
+        display: block; 
+        margin-left: auto; 
+        margin-right: auto; 
+        text-align: center; 
+        width: 250px; 
+        border-radius: 10px; 
+        border-bottom: 10px solid rgb(85, 5, 116); 
+        transform: translateY(0px); 
+        transition: all 400ms; 
+        animation-name: jumpjivewail; 
+        animation-duration: 5s; 
+        animation-timing-function: ease-in-out; 
+        animation-iteration-count: infinite;}
+    .button:hover {
+        background-color: #EE05F2; 
+        color: rgb(244, 116, 216);
+        border-bottom: 10px solid #7a027c; 
+        transform: translateY(-10px)} 
+    .button:active {
+        background-color: #EE05F2; 
+        color: rgb(123, 185, 255);
+        border-bottom: 0px solid palevioletred; 
+        transform: translateY(0px);}
+
+    .main-content img {width:50%;} 
+    .main-content img:first-child {width:100%;}
+
+.title-header h1 { 
+    animation-name: popping-in; 
+    animation-duration:400ms;}
+.title-header h2 { 
+    animation-name: popping-in; 
+    animation-duration:400ms; 
+    animation-delay: 200ms; 
+    transform: translateY(-50px); 
+    opacity: 0; 
+    animation-fill-mode: forwards;}
+
+@keyframes popping-in {from {transform: translateY(-50px); opacity:0;} to { transform:translateY(0px); opacity: 1;}}
+@keyframes jumpjivewail {
+    0% {transform: translateX(0px); background-color: #7503A6} 
+    25% {transform: translateX(-200px); background-color: blueviolet} 
+    50% {transform: translateX(0px); background-color: #7503A6} 
+    75% {transform: translateX(200px); background-color:blueviolet}
+    100% {transform: translateX(0px); background-color: #7503A6;} 
+}
