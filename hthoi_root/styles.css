@@ -159,8 +159,8 @@ animation-fill-mode:forwards;
 
 @keyframes jumpjivewail {
     0% { transform:translateX(0px); background-color: #C8CA5F; }
-    25% { transform: translateX(-200px); background-color: pink; }
-    50% { transform:translateX(0px); background-color: blue; }
-    75% { transform:translateX(200px); background-color: green; }
+    25% { transform: translateX(-200px); background-color: #BF80BA; }
+    50% { transform:translateX(0px); background-color: #C8CA5F; }
+    75% { transform:translateX(200px); background-color: #BF80BA; }
     100% { transform:translateX(0px); background-color: #C8CA5F; }
 }

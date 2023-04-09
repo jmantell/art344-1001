@@ -1,0 +1,259 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+/* CSS Document */
+
+body {
+				color: #02519B;
+				background: #EBEFFC;
+				margin: 0;
+				font-family:'Kanit', sans-serif;
+			}
+			p{ 
+				line-height: 2 !important; 
+			}
+			nav { 
+				background: black; 
+				color: white;
+				margin: 0;
+				width: 100%;
+				height: 30px;
+				padding-top: 15px;
+				text-decoration: none;
+				font-size: 12px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				position: fixed;
+				top:0;
+				z-index: 999;
+				
+			}
+			nav > ul {
+				margin: 0;
+				list-style:none;
+			}
+			nav > ul > li {
+				float: left;
+				margin-right: 25px;
+			}
+			nav > ul > li > a, nav > ul > li > ul > li > a {
+				color: white;
+				text-decoration: none;
+				text-size: 12px;
+				text-transform: uppercase;
+				letter-spacing: 1px;
+				transition: all 1s; 
+			}
+			nav > ul > li > a:hover, nav > ul > li > ul > li > a:hover {
+				color: aqua;
+				text-decoration: underline;	
+			}
+ 
+			.favorites-menu {
+				background-color: black;
+				width: 160px;
+				list-style: none;
+				display: none;
+				padding:0;
+				margin-top:10px;
+			}
+			.favorites-menu > li {
+				padding:10px;
+				border-top: 1px solid white;
+			}
+			.favorites-reveal {
+					transition: all 1s;
+				}
+			.favorites-reveal:hover .favorites-menu {
+				display: block;
+			}
+			.favorites-reveal::before {
+				content:"+ ";
+				color: yellow; 
+				font-size: 18px;
+				line-height: 0;
+			}
+			a.active {
+				color: yellow;
+				font-weight: bold;
+			}
+			.main-header {
+				background-color: white;
+				text-align: center;
+				padding: 20px 0;
+				margin-top: 40px;
+			}
+			.homepage-header {
+				background-image: url("../images/jean-philippe-delberghe-75xPHEQBmvA-unsplash.jpg");
+				background-size: cover;
+				background-position: center
+			}
+			.gallery-header {
+				background-image: url("../images/daniele-levis-pelusi-mkMSXR86kYY-unsplash.jpg");
+				background-size: cover;
+				background-position: center
+				}
+			.schedule-header {
+				background-image: url("../images/drew-beamer-kUHfMW8awpE-unsplash.jpg");
+				background-size: cover;
+				background-position: center
+				}
+			.contact-header {
+				background-image: url("../images/robin-schreiner-7y4858E8PfA-unsplash.jpg");
+				background-size: cover;
+				background-position: center
+				}
+			.favorites-header {
+				background-image: url("../images/milad-fakurian-GJKx5lhwU3M-unsplash.jpg");
+				background-size: cover;
+				background-position: center;
+				}
+			.favorites-wrapper {
+				background: white;
+				padding: 30px;
+				box-shadow: 0px 2px 15px rgb(0,0,0,.2);
+				width: 80%;
+				max-width: 700px;
+				margin: 0 auto;
+				}
+			h1 {
+				color: black;
+				width: 500px;
+				margin: 0 auto;
+				font-weight: normal;
+				font-size: 56px;
+				text-shadow: 0px 1px 15px white;
+				
+				opacity:0;
+				transform: translateY(50px);
+				
+				animation-name: popupghost;
+				animation-duration: 1s;
+				animation-delay: 1s;
+				animation-fill-mode: forwards;
+				animation-iteration-count: 1;
+				animation-direction: normal;
+			}
+			h2 {
+				color: black;
+				text-shadow: 0px 1px 15px white; 
+				animation-name: popupghost;
+				animation-duration: 1s;
+				animation-delay: 1.5s;
+				animation-fill-mode: forwards;
+				animation-iteration-count: 1;
+				animation-direction: normal;
+				opacity: 0;
+				transform: translateY(50px)
+			}
+			.main-body {
+				background: white;
+				padding: 30px;
+				box-shadow: 0px 2px 15px rgb(0,0,0,.2);
+				width: 80%;
+				max-width: 700px;
+				margin: 25px auto;
+			}
+			.main-body a {
+				color:red;
+				text-decoration: none;
+			}
+			.main-body a:hover {
+				color:maroon;
+				text-decoration: underline;
+			}
+			.main-body a:active {
+				color:blue;
+				text-decoration: line-through;
+}
+			.main-body a:visited {
+				color:chocolate;
+				text-decoration: line-through;
+}
+			.cta-wrapper {
+				background-color:red;
+				padding:20px;
+				border-radius:5px;
+				font-size:18px;
+				color: #fff;
+				text-align: center;
+				position:fixed;
+				bottom:20px;
+				right: 20px;
+				display:flex;
+				flex-flow:column;
+				justify-content: center;
+				align-items:center;
+				
+			}
+			.cta-button {
+				background-color: yellow;
+				font-size: 24px;
+				text-transform: uppercase;
+				color: black;
+				padding: 5px 10px;
+				text-decoration: none;
+				margin-top:20px;
+				margin-bottom:10px;
+				transition: all 250ms 0s ease-in-out; 
+			}
+			.cta-button:hover {
+				background-color:aquamarine;
+				margin-top:10px;
+				margin-bottom:20px;
+			}
+			.cta-button:active {
+				margin-top:20px;
+				margin-bottom:10px;
+			}
+
+			.gallery-wrapper {
+				column-count: 2;
+			}
+			.gallery-wrapper > img {
+				width:100%;
+				margin-bottom:20px;
+			}
+			.gallery-wrapper > img:last-child {
+				margin-bottom: 0;
+			}
+			.gallery-wrapper {
+				background: white;
+				padding: 30px;
+				box-shadow: 0px 2px 15px rgb(0,0,0,.2);
+				width: 80%;
+				max-width: 700px;
+				margin: 25px auto;
+			}
+			@keyframes popupghost {
+			from {opacity:0;transform: translateY(0px); }
+			to { opacity:1; transform: translateY(10px);}
+			}
+
+.moving-text {
+	position: absolute;
+	top:300px;
+	left: 50%;
+	margin-left: 50px;
+	background-color: darkblue;
+	color: white;
+	padding: 10px;
+	font-size: 30px;
+	border-radius: 10px;
+	width: 150px;
+	height: auto;
+	text-align: center;
+	font-weight: bold;
+	animation-name:jumpjive;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	
+}
+
+@keyframes jumpjive {
+	0% {background-color:darkblue; transfrom: 
+	25% {background-color:orangered;top:100px;left:50%}
+	50% {background-color:chartreuse;top:300px;left:50%}
+	75% {background-color: indigo;top:200px;left:25%}
+	100% {background-color:darkblue;transform:
+}

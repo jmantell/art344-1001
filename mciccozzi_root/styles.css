@@ -1,30 +1,172 @@
- @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
- .dropdown-link:after{ content: "+";}
- .nav-link{ color:white; text-decoration:none;}
- .nav-link:hover { color:yellowgreen !important; text-decoration: none;}
- .nav-link:visited {color: green}
-    .active{color: yellow !important; text-decoration:underline !important;}
-    body{color:#333  !important; background:#00FFFF; font-family: 'Tinos', serif; margin:0;}
-    ul, li{margin:0; padding:0;}
-    li {display:inline; margin-right:20px}
-    h1,h2{color:#fff; text-shadow:0px 5px 10px rgba(0,0,0,1); 
-        margin:0; padding:0; font-family: 'Anton', sans-serif; text-align:center; }
-    p{font-size: 16px; font-weight: bold; line-height: 24px;}
-    .main-navigation {background:blue; color:white; padding:10px; position:fixed; width:100%; top:0; }
-    .main-navigation a {color:white; text-decoration:none;}
-    .dropdown{display:block; position:absolute; width:200px; margin-left: 210px; margin-top:10px;}
-    .dropdown li{display:block; background-color: blue; padding:5px, 10px; border-top: 1px solid white}
-    .dropdown-link:hover .dropdown {display:block; }
-    .title-header{ background-image: url(images/header-background.jpg); background-size: 520px; 
-        background-repeat: repeat-x; background-position: bottom right; padding:100px; margin-top:30px; }
-    .main-content{background-color:white; border-style:solid; 
-        border-color:black; border-width:2px; border-radius:10px; 
-        overflow:hidden; box-shadow:0px 5px 10px rgba(0,0,0,.5); width:600px; margin: 20px auto; padding:20px 40px;}
-       .button {background-color:#333;
-    color:white; text-decoration:none; text-transform:uppercase; font-size: 24px; padding: 20px; 
-    margin-top:40px; margin-bottom:10px; border-radius:10px; border-bottom: 10px solid black;
-display:block; margin-right: auto; margin-left:auto; text-align:center; width:250px; border-radius:10px;}
-.button:hover {background-color:red; color:yellow; border-bottom:10px solid green}
-.button:active {background-color: blueviolet;margin-top:50px; border-bottom:0px solid purple}
-.main-content img { width:50%;}
-.main-content img:first-child { width:100%;}
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap');
+
+body {
+    font-family: Georgia, serif;
+    color: #2e2e2e;
+    background: #994ff3;
+    margin: 0;
+}
+ul, li {
+    margin:0;
+    padding:0;
+}
+li {
+    display: inline;
+    margin-right: 20px;
+}
+a {
+    color:#994ff3;
+}
+h1, h2 {
+    color: #fbdd74;
+    font-family: 'Zilla Slab', serif;
+    text-shadow: 0px 5px 10px rgba(46,46,46,1);
+    margin:0;
+}
+p {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 21px;
+}
+.main-navigation {
+    background: #482673;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    width:100%;
+    top: 0;
+    z-index: 999;
+}
+.main-navigation a {
+    color:white;
+    text-decoration: none;
+}
+.dropdown {
+    display:none;
+    position: absolute;
+    width:200px;
+    margin-left:210px;
+    padding-top:10px;
+}
+.dropdown li {
+    display:block;
+    background-color:#482673;
+    padding:5px 10px;
+    border-top: 1px solid white; 
+}
+.dropdown-link:hover .dropdown {
+    display:block;
+}
+.dropdown-link::before {
+    content: "+";
+}
+.nav-link {
+    color: white;
+    text-decoration: none;
+}
+.nav-link:hover {
+    color: #fbdd74 !important;
+    text-decoration: underline !important;
+}
+.nav-link:visited {
+    color: #ccc;
+}
+.active {
+    color: #fbdd74 !important;
+    text-decoration: underline !important;
+} 
+.title-header {
+    background-image: url(images/header-background.jpg);
+    background-size:400px;
+    background-repeat: repeat-x;
+    padding: 100px;
+    text-align: center;
+    margin-top:38px;
+}
+.main-content {
+    background-color: white;
+    border-style:solid;
+    border-color: #000;
+    border-width: 2px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 5px 10px rgba(46,46,46,.5);
+    width: 600px;
+    margin: 20px auto;
+    padding: 20px 40px;
+}
+.button {
+    background-color: #666;
+    color: white;
+    text-decoration:none;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align:center;
+    width:250px;
+    border-radius: 10px;
+    border-bottom: 10px solid black;
+    transform: translateY(0px);
+    transition: all 400ms;
+    animation-name: jumpjivewail;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+.button:hover {
+    background-color:pink;
+    color:purple;
+    border-bottom: 10px solid purple;
+    transform: translateY(-10px);
+}
+.button:active {
+    background-color: purple;
+    color:white;
+    border-bottom: 0px solid purple;
+    transform: translateY(10px);
+}
+.main-content img {
+    width:50%;
+}
+.main-content img:nth-child(3) {
+    width:100%;
+}
+
+.title-header h1 {
+    animation-name: popping-in;
+    animation-duration: 400ms;
+}
+.title-header h2 {
+    animation-name: popping-in;
+    animation-duration: 400ms;
+    animation-delay: 200ms;
+    transform: translateY(-50px);
+    opacity: 0;
+    animation-fill-mode:forwards;
+}
+
+@keyframes popping-in {
+    from { transform:translateY(-50px); opacity:0; }
+    to { transform:translateY(0px); opacity:1;}
+}
+
+@keyframes jumpjivewail {
+    0% { transform:rotate(0); background-color:#666}
+    25% { transform:scale(360deg); background-color: pink}
+    50% { transform:rotate(0); background-color: blue}
+    75% { transform:rotate(360deg); background-color: green}
+    100% { transform:rotate(0); background-color: #666}
+}
+
+
+
+
+
+
+

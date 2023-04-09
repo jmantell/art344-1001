@@ -136,7 +136,16 @@ p {
   .main-content img {
     width: 50%;
   }
+  .main-content img:first-child {
+    width: 100%;
+  }
   .main-content img:nth-child(2) {
+    width: 100%;
+  }
+  .main-content img:nth-child(3) {
+    width: 100%;
+  }
+  .main-content img:last-child {
     width: 100%;
   }
 
@@ -160,9 +169,7 @@ p {
   }
 
   @keyframes jump-jive-wail {
-    0% {transform: rotate(100deg); background-color: #DB7F30;}
-    25% {transform: scale(2, 2); background-color: #6BD6FF;}
-    50% {transform: rotate(100deg);background-color: #9B1E20;}
-    75% {transform: rotate(100deg);background-color: #FFDDE0;}
-    100% {transform: scale(2, 2); background-color: #0B387A;}
+    0% {transform: rotate(0deg); background-color: #DB7F30;}
+    50% {transform: rotate(360deg); background-color: #0B387A;}
+    100% {transform: scale(1, 2); background-color: #B72C8B;}
   }
